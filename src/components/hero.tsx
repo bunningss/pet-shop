@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 export function Hero() {
   return (
-    <div className="flex h-[80vh]">
+    <section className="flex h-[80vh]">
       {/* Text */}
       <div className="flex flex-col items-start justify-center gap-8">
         <Heading className="text-8xl">
@@ -16,6 +16,6 @@ export function Hero() {
       </div>
       {/* Image */}
       <div></div>
-    </div>
+    </section>
   );
 }
