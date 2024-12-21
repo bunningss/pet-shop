@@ -4,8 +4,8 @@ import { font } from "@/lib/fonts";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pet Shop",
-  description: "Best pet shop in the country.",
+  title: "E-commerce",
+  description: "E-commerce website",
 };
 
 export default function RootLayout({
@@ -16,7 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
