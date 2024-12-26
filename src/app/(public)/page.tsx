@@ -1,3 +1,9 @@
+import { ProductView } from "@/components/product-view";
+
 export default function Page() {
-  return <div></div>;
+  return (
+    <div>
+      <ProductView />
+    </div>
+  );
 }

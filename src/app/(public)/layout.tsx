@@ -1,6 +1,8 @@
+import { Container } from "@/components/container";
 import { Navbar } from "@/components/navbars/navbar";
+import { UserDataProps } from "@/lib/types";
 
-const userData = {
+const userData: UserDataProps = {
   error: false,
   payload: {
     name: "my name",
@@ -16,7 +18,9 @@ export default function ClientLayout({
   return (
     <>
       <Navbar userData={userData} />
-      <main>{children}</main>
+      <main>
+        <Container>{children}</Container>
+      </main>
     </>
   );
 }
