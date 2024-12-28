@@ -51,13 +51,13 @@ export function UserMenu({ userData }: { userData: UserDataProps }) {
         {userData?.error !== undefined && !userData.error && (
           <>
             <Link passHref href="/user/profile" className="w-full">
-              <DropdownMenuItem>
+              <DropdownMenuItem className="flex justify-between">
                 <span>profile</span>
                 <Icon size={22} name="user" />
               </DropdownMenuItem>
             </Link>
             <Link passHref href="/user/orders" className="w-full">
-              <DropdownMenuItem>
+              <DropdownMenuItem className="flex justify-between">
                 <span>orders</span>
                 <Icon size={22} name="package" />
               </DropdownMenuItem>
@@ -77,6 +77,7 @@ export function UserMenu({ userData }: { userData: UserDataProps }) {
             <>
               <DropdownMenuSeparator />
               <DropdownMenuItem
+                className="flex justify-between"
                 onClick={() => {
                   //   logout();
                   router.refresh();
