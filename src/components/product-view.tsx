@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Title from "./title";
+import { Title } from "./title";
 import { Product } from "./cards/product";
 
 export function ProductView() {

@@ -16,8 +16,9 @@ interface InputProps<TFieldValues extends FieldValues> {
   placeholder: string;
   description?: string;
   type?: string;
-  required: boolean;
+  required?: boolean;
   disabled?: boolean;
+  className?: string;
 }
 
 export function FormInput<TFieldValues extends FieldValues>({
@@ -29,6 +30,7 @@ export function FormInput<TFieldValues extends FieldValues>({
   type = "text",
   required,
   disabled,
+  className,
 }: InputProps<TFieldValues>) {
   return (
     <FormField
@@ -49,6 +51,7 @@ export function FormInput<TFieldValues extends FieldValues>({
           )}
           <FormControl>
             <Input
+              className={className}
               placeholder={placeholder || ""}
               {...field}
               disabled={disabled}
