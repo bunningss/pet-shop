@@ -6,6 +6,7 @@ export interface UserDataProps {
   payload: {
     name: string;
     role: string;
+    email: string;
   };
 }
 
