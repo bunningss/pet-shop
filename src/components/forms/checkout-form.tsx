@@ -87,40 +87,38 @@ export function CheckoutForm() {
       loading={isLoading}
       disabled={isLoading}
     >
-      <div>
-        <Title title="shipping information" />
-        <div className="flex flex-col gap-4 mt-4">
-          <FormInput
+      <Title title="shipping information" />
+      <div className="space-y-4">
+        <FormInput
+          form={form}
+          label="full name / পুরো নাম"
+          placeholder="John Doe"
+          name="name"
+        />
+        <FormInput
+          form={form}
+          label="address / ঠিকানা"
+          placeholder="21/3, Mariana Drive, AC"
+          name="address"
+          required
+        />
+
+        <div className="grid lg:grid-cols-2 gap-2 md:gap-4">
+          <FormSelect
             form={form}
-            label="full name / পুরো নাম"
-            placeholder="John Doe"
-            name="name"
-          />
-          <FormInput
-            form={form}
-            label="address / ঠিকানা"
-            placeholder="21/3, Mariana Drive, AC"
-            name="address"
+            name="city"
+            placeholder="select city"
+            options={locations}
+            label="city / শহর"
             required
           />
-
-          <div className="grid md:grid-cols-2 gap-2 md:gap-4">
-            <FormSelect
-              form={form}
-              name="city"
-              placeholder="select city"
-              options={locations}
-              label="city / শহর"
-              required
-            />
-            <FormInput
-              form={form}
-              placeholder="01..."
-              name="phone"
-              label="phone number / মোবাইল নম্বর"
-              required
-            />
-          </div>
+          <FormInput
+            form={form}
+            placeholder="01..."
+            name="phone"
+            label="phone number / মোবাইল নম্বর"
+            required
+          />
         </div>
       </div>
 
